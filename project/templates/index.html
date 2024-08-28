@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMC Trading Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <div class="container">
+            <h1>Dips BTC Signals Bot</h1>
+            <div class="signal-box">
+                <button id="refresh-button">Refresh</button>
+                <div id="loading-animation" class="loading hidden"></div>
+                <div id="signal-data" class="hidden">
+                    <h2 id="signal-title">New Signal</h2>
+                    <p>Entry Point: <span id="entry-point"></span></p>
+                    <p>Take Profit: <span id="take-profit"></span></p>
+                    <p>Stop Loss: <span id="stop-loss"></span></p>
+                    <p>Risk to Reward Ratio: <span id="risk-reward"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
